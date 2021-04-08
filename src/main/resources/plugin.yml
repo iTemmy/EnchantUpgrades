@@ -1,0 +1,10 @@
+name: EnchantUpgrades
+version: ${project.version}
+main: com.temmy.enchantupgrades.Main
+api-version: 1.16
+authors: [ iTemmy ]
+commands:
+  test:
+    description: Used for testing different things in dev environment
+  getitem:
+    description: Admin command for get custom items from this plugin.
