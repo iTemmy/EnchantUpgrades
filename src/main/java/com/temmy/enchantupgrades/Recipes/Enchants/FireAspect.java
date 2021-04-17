@@ -14,6 +14,7 @@ public class FireAspect {
     public FireAspect(){
         FireAspect1();
         FireAspect2();
+        FireAspect3();
     }
 
     private void FireAspect1(){
@@ -40,5 +41,15 @@ public class FireAspect {
         recipe.setIngredient('B', Main.getImbuedEssences().get(Keys.getImbuedBlaze()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getFireAspect2(), item);
+    }
+
+    private void FireAspect3(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.FIRE_ASPECT, 3, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFireAspect3(), item);
+        //TODO: Add recipe for Fire Aspect 3
+        Main.getEnchants().put(Keys.getFireAspect3(), item);
     }
 }

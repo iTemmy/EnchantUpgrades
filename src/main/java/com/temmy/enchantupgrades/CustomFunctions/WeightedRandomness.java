@@ -1,13 +1,12 @@
 package com.temmy.enchantupgrades.CustomFunctions;
 
-import java.util.NavigableMap;
 import java.util.Random;
 import java.util.TreeMap;
 
-public class WeightedRandomness<Double> {
-    private final NavigableMap<java.lang.Double, Object> map = new TreeMap<java.lang.Double, Object>();
+public class WeightedRandomness<T> {
+    private final TreeMap<Double, T> map = new TreeMap<Double, T>();
     private final Random random;
-    private java.lang.Double total = java.lang.Double.valueOf(0);
+    private double total = 0d;
 
     public WeightedRandomness(){
         this(new Random());
@@ -17,15 +16,14 @@ public class WeightedRandomness<Double> {
         this.random = random;
     }
 
-    public WeightedRandomness<Double> add (double weight, Double result){
-        if (weight <= 0) return this;
+    public void add (double weight, T result){
+        if (weight <= 0) return;
         total += weight;
         map.put(total, result);
-        return  this;
     }
 
-    public Double next(){
+    public T next(){
         double value = random.nextDouble() * total;
-        return (Double) map.higherEntry(value).getValue();
+        return map.higherEntry(value).getValue();
     }
 }

@@ -17,6 +17,10 @@ public class BlastProtection {
         BlastProtection1();
         BlastProtection2();
         BlastProtection3();
+        BlastProtection4();
+        BlastProtection5();
+        BlastProtection6();
+        BlastProtection7();
     }
 
     private void BlastProtection1(){
@@ -61,13 +65,40 @@ public class BlastProtection {
     private void BlastProtection4(){
         ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
         EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
-        EMeta.addStoredEnchant(Enchantment.PROTECTION_EXPLOSIONS, 4,false);
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_EXPLOSIONS, 4,true);
         item.setItemMeta(EMeta);
         ShapedRecipe recipe = new ShapedRecipe(Keys.getBlastProtection4(), item);
-        recipe.shape("CCC","CBC","CCC");
-        recipe.setIngredient('C', CombustibleScraps);
-        recipe.setIngredient('B', Main.getEnchants().get(Keys.getBlastProtection3()));
-        Bukkit.getServer().addRecipe(recipe);
+        //TODO: Add recipe for Blast Protection 4
         Main.getEnchants().put(Keys.getBlastProtection4(), item);
+    }
+
+    private void BlastProtection5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_EXPLOSIONS, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getBlastProtection5(), item);
+        //TODO: Add recipe for Blast Protection 5
+        Main.getEnchants().put(Keys.getBlastProtection5(), item);
+    }
+
+    private void BlastProtection6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_EXPLOSIONS, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getBlastProtection6(), item);
+        //TODO: Add recipe for Blast Protection 6
+        Main.getEnchants().put(Keys.getBlastProtection6(), item);
+    }
+
+    private void BlastProtection7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_EXPLOSIONS, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getBlastProtection7(), item);
+        //TODO: Add recipe for Blast Protection 7
+        Main.getEnchants().put(Keys.getBlastProtection7(), item);
     }
 }

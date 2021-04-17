@@ -17,6 +17,9 @@ public class Efficiency {
         Efficiency3();
         Efficiency4();
         Efficiency5();
+        Efficiency6();
+        Efficiency7();
+        Efficiency8();
     }
 
     private void Efficiency1(){
@@ -82,5 +85,35 @@ public class Efficiency {
         recipe.setIngredient('E', Main.getEnchants().get(Keys.getEfficiency4()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getEfficiency5(), item);
+    }
+
+    private void Efficiency6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DIG_SPEED, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getEfficiency6(), item);
+        //TODO: Add recipe for Efficiency 6
+        Main.getEnchants().put(Keys.getEfficiency6(), item);
+    }
+
+    private void Efficiency7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DIG_SPEED, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getEfficiency7(), item);
+        //TODO: Add recipe for Efficiency 7
+        Main.getEnchants().put(Keys.getEfficiency7(), item);
+    }
+
+    private void Efficiency8(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DIG_SPEED, 8 , true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getEfficiency8(), item);
+        //TODO: Add recipe for Efficiency 8
+        Main.getEnchants().put(Keys.getEfficiency8(), item);
     }
 }

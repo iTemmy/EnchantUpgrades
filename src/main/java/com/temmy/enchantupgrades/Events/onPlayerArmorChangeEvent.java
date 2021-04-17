@@ -27,31 +27,13 @@ public class onPlayerArmorChangeEvent implements Listener {
                     }else if (key.equals(Keys.getFullSetNoAirLoss())){
                         Effects.RemoveAttributeEffects(ConvertKeys(key), e.getPlayer(), e.getOldItem().getItemMeta().getPersistentDataContainer().get(key, PersistentDataType.BYTE));
                     }else if (Keys.getFullSetAttributes().contains(key)){
-                        System.out.println("test full set attributes");
                         Effects.RemoveAttributeEffects(onPlayerJoinEvent.convertFullSetKeys(key), e.getPlayer(), e.getOldItem().getItemMeta().getPersistentDataContainer().get(key, PersistentDataType.DOUBLE));
                     }
                 }
             }
         }
         onPlayerJoinEvent.CheckArmor(e.getPlayer().getInventory().getArmorContents(), e.getPlayer());
-        /*
-        //Will apply effects from new armor that has been put on
-        if (e.getNewItem() != null){
-            if (e.getNewItem().getItemMeta() != null){
-                Set<NamespacedKey> keys = e.getNewItem().getItemMeta().getPersistentDataContainer().getKeys();
-                for (NamespacedKey key : keys){
-                    if (!(Keys.getFullSetEffects().contains(key))) {
-                        if (Keys.getEffectKeys().contains(ConvertKeys(key))) {
-                            Effects.AddArmorEffect(ConvertKeys(key), e.getPlayer(), e.getNewItem().getItemMeta().getPersistentDataContainer().get(key, PersistentDataType.INTEGER));
-                        } else if (Keys.getAttributeKeys().contains(ConvertKeys(key))) {
-                            Effects.AddAttributeEffects(ConvertKeys(key), e.getPlayer(), e.getNewItem().getItemMeta().getPersistentDataContainer().get(ConvertKeys(key), PersistentDataType.DOUBLE));
-                        }
-                    }
-                }
-            }
-        }
-        */
-        //TODO: Need to make it check if putting on new armor and if so remove old effects then add new ones if they have effects for new armor.
+        // TODO: Need to make it check if putting on new armor and if so remove old effects then add new ones if they have effects for new armor.
     }
 
     /**

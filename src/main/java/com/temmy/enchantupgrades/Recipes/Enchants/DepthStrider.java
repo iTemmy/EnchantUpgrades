@@ -15,6 +15,8 @@ public class DepthStrider {
         DepthStrider1();
         DepthStrider2();
         DepthStrider3();
+        DepthStrider4();
+        DepthStrider5();
     }
 
     private void DepthStrider1(){
@@ -54,5 +56,25 @@ public class DepthStrider {
         recipe.setIngredient('B', Main.getEnchants().get(Keys.getDepthStrider2()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getDepthStrider3(), item);
+    }
+
+    private void DepthStrider4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DEPTH_STRIDER, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getDepthStrider4(), item);
+        //TODO: Add recipe for Depth Strider 4
+        Main.getEnchants().put(Keys.getDepthStrider4(), item);
+    }
+
+    private void DepthStrider5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DEPTH_STRIDER, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getDepthStrider5(), item);
+        //TODO: Add recipe for Depth Strider 5
+        Main.getEnchants().put(Keys.getDepthStrider5(), item);
     }
 }

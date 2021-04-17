@@ -16,6 +16,9 @@ public class FeatherFalling {
         FeatherFalling2();
         FeatherFalling3();
         FeatherFalling4();
+        FeatherFalling5();
+        FeatherFalling6();
+        FeatherFalling7();
     }
 
     private void FeatherFalling1(){
@@ -68,5 +71,35 @@ public class FeatherFalling {
         recipe.setIngredient('B', Main.getEnchants().get(Keys.getFeatherFalling3()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getFeatherFalling4(), item);
+    }
+
+    private void FeatherFalling5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_FALL, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFeatherFalling5(), item);
+        //TODO: Add recipe for Feather Falling 5
+        Main.getEnchants().put(Keys.getFeatherFalling5(), item);
+    }
+
+    private void FeatherFalling6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_FALL, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFeatherFalling6(), item);
+        //TODO: Add recipe for Feather Falling 6
+        Main.getEnchants().put(Keys.getFeatherFalling6(), item);
+    }
+
+    private void FeatherFalling7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_FALL, 7,  true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFeatherFalling7(), item);
+        //TODO: Add recipe for Feather Falling 7
+        Main.getEnchants().put(Keys.getFeatherFalling7(), item);
     }
 }

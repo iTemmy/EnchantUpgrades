@@ -17,6 +17,9 @@ public class BaneOfArthropods {
         BaneOfArthropods3();
         BaneOfArthropods4();
         BaneOfArthropods5();
+        BaneOfArthropods6();
+        BaneOfArthropods7();
+        BaneOfArthropods8();
     }
 
     private void BaneOfArthropods1(){
@@ -82,5 +85,34 @@ public class BaneOfArthropods {
         recipe.setIngredient('B', Main.getEnchants().get(Keys.getBaneOfArthropods4()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getBaneOfArthropods5(), item);
+    }
+    private void BaneOfArthropods6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_ARTHROPODS, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getBaneOfArthropods6(), item);
+        //TODO: Add recipe for BaneOfArthropods 6
+        Main.getEnchants().put(Keys.getBaneOfArthropods6(), item);
+    }
+
+    private void BaneOfArthropods7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_ARTHROPODS, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getBaneOfArthropods7(), item);
+        //TODO: Add recipe for BaneOfArthropods 7
+        Main.getEnchants().put(Keys.getBaneOfArthropods7(), item);
+    }
+
+    private void BaneOfArthropods8(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_ARTHROPODS, 8, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getBaneOfArthropods8(), item);
+        //TODO: Add recipe for BaneOfArthropods 8
+        Main.getEnchants().put(Keys.getBaneOfArthropods8(), item);
     }
 }

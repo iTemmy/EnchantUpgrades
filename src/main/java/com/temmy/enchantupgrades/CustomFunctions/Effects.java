@@ -115,7 +115,9 @@ public class Effects {
                 player.removePotionEffect(PotionEffectType.HEAL);
             }else if (key.equals(Keys.getEffectInstantDamage())){
                 player.removePotionEffect(PotionEffectType.HARM);
-            }else if (key.equals(Keys.getEffectJumpBoost())){
+            }else if (key.equals(Keys.getEffectJumpBoost())) {
+                player.removePotionEffect(PotionEffectType.JUMP);
+            }else if (key.equals(Keys.getEffectNausea())){
                 player.removePotionEffect(PotionEffectType.CONFUSION);
             }else if (key.equals(Keys.getEffectRegeneration())){
                 player.removePotionEffect(PotionEffectType.REGENERATION);

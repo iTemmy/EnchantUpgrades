@@ -13,8 +13,8 @@ import com.temmy.enchantupgrades.Recipes.CustomOres;
 import com.temmy.enchantupgrades.Recipes.Enchants.*;
 import com.temmy.enchantupgrades.Recipes.Essences;
 import com.temmy.enchantupgrades.Recipes.ImbuedEssences;
+import com.temmy.enchantupgrades.Recipes.ObsidianMacuahuitl;
 import com.temmy.enchantupgrades.TabCompletions.getItemTabCompleter;
-import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -119,5 +119,6 @@ public final class Main extends JavaPlugin {
         new Sage();
         new Scale();
         new Dragonscale();
+        new ObsidianMacuahuitl();
     }
 }

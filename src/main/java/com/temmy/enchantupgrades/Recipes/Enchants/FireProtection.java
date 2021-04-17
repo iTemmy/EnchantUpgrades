@@ -18,6 +18,9 @@ public class FireProtection {
         FireProtection2();
         FireProtection3();
         FireProtection4();
+        FireProtection5();
+        FireProtection6();
+        FireProtection7();
     }
 
     private void FireProtection1(){
@@ -70,5 +73,35 @@ public class FireProtection {
         recipe.setIngredient('P', Main.getEnchants().get(Keys.getFireProtection3()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getFireProtection4(), item);
+    }
+
+    private void FireProtection5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_FIRE, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFireProtection5(), item);
+        //TODO: Add recipe for Fire Protection 5
+        Main.getEnchants().put(Keys.getFireProtection5(), item);
+    }
+
+    private void FireProtection6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_FIRE, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFireProtection6(), item);
+        //TODO: Add recipe for Fire Protection 6
+        Main.getEnchants().put(Keys.getFireProtection6(), item);
+    }
+
+    private void FireProtection7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_FIRE, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFireProtection7(), item);
+        //TODO: Add recipe for Fire Protection 7
+        Main.getEnchants().put(Keys.getFireProtection7(), item);
     }
 }

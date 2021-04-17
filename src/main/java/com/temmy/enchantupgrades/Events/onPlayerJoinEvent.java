@@ -29,7 +29,6 @@ public class onPlayerJoinEvent implements Listener {
     public static void CheckArmor(ItemStack[] armors, Player player){
         //TODO: need to make check to see if player has full set on and if so apply full set effect
         int armorSet = 0;
-        boolean NoAir = false;
         boolean dragon;
         boolean scale;
         boolean sage;
@@ -130,8 +129,6 @@ public class onPlayerJoinEvent implements Listener {
                         }
                     }
                 }
-            }else {
-                NoAir = false;
             }
         }
     }
@@ -204,7 +201,6 @@ public class onPlayerJoinEvent implements Listener {
         }else if (key.equals(Keys.getFullSetChangeSpeed())){
             return Keys.getChangeSpeed();
         }else if (key.equals(Keys.getFullSetIncreaseHealth())){
-            System.out.println("test health increase");
             return Keys.getIncreaseHealth();
         }else if (key.equals(Keys.getFullSetNoAirLoss())){
             return Keys.getNoAirLoss();

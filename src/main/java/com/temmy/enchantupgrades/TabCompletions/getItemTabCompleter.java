@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -32,18 +31,9 @@ public class getItemTabCompleter implements @Nullable TabCompleter {
                 completions.addAll(Arrays.asList("set","helmet","chestplate","leggings","boots"));
                 return completions;
             }else if (args[1].equalsIgnoreCase("ore")){
-                final List<String> completions = new ArrayList<>();
-                completions.addAll(Arrays.asList("ellendyte","corinthium","jolixanine","phosphorus","tungsten","sapphire","zinc","janelite"));
-                return completions;
+                return ores();
             }else if (args[1].equalsIgnoreCase("enchant")){
-                final List<String> completions = new ArrayList<>();
-                completions.addAll(Arrays.asList("protection", "fire_protection", "feather_falling","blast_protection",
-                        "projectile_protection","respiration","aqua_affinity","thorns","depth_strider","frost_walker",
-                        "curse_binding","sharpness","smite","bane_of_arthropods","knockback","fire_aspect","looting",
-                        "sweeping_edge","efficiency","silk_touch","unbreaking","fortune","power","punch","flame","infinity",
-                        "luck_of_the_sea","lure","loyalty","impaling","riptide","channeling","multishot","quick_charge",
-                        "piercing","mending","curse_vanishing","soul_speed"));
-                return completions;
+                return Enchants();
             }
         }else if (args.length == 4){
             if (args[2].equalsIgnoreCase("set")){
@@ -56,27 +46,118 @@ public class getItemTabCompleter implements @Nullable TabCompleter {
                 return CustomArmors();
             }else if (args[2].equalsIgnoreCase("boots")){
                 return CustomArmors();
+            }else if (ores().contains(args[2])){
+                return Numbers(64);
+            }else if (Enchants().contains(args[2])){
+                String enchant = args[2];
+                if (enchant.equalsIgnoreCase("protection")){
+                    return Numbers(7);
+                }else if (enchant.equalsIgnoreCase("fire_protection")){
+                    return Numbers(7);
+                }else if (enchant.equalsIgnoreCase("feather_falling")){
+                    return Numbers(7);
+                }else if (enchant.equalsIgnoreCase("blast_protection")){
+                    return Numbers(7);
+                }else if (enchant.equalsIgnoreCase("projectile_protection")){
+                    return Numbers(7);
+                }else if (enchant.equalsIgnoreCase("respiration")){
+                    return Numbers(5);
+                }else if (enchant.equalsIgnoreCase("aqua_affinity")){
+                    return Numbers(1);
+                }else if (enchant.equalsIgnoreCase("thorns")){
+                    return Numbers(5);
+                }else if (enchant.equalsIgnoreCase("depth_strider")){
+                    return Numbers(5);
+                }else if (enchant.equalsIgnoreCase("frost_walker")){
+                    return Numbers(3);
+                }else if (enchant.equalsIgnoreCase("curse_binding")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("sharpness")) {
+                    return Numbers(8);
+                } else if (enchant.equalsIgnoreCase("smite")) {
+                    return Numbers(8);
+                } else if (enchant.equalsIgnoreCase("bane_of_arthropods")) {
+                    return Numbers(8);
+                } else if (enchant.equalsIgnoreCase("knockback")) {
+                    return Numbers(3);
+                } else if (enchant.equalsIgnoreCase("fire_aspect")) {
+                    return Numbers(3);
+                } else if (enchant.equalsIgnoreCase("looting")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("sweeping_edge")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("efficiency")) {
+                    return Numbers(8);
+                } else if (enchant.equalsIgnoreCase("silk_touch")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("unbreaking")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("fortune")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("power")) {
+                    return Numbers(8);
+                } else if (enchant.equalsIgnoreCase("punch")) {
+                    return Numbers(3);
+                } else if (enchant.equalsIgnoreCase("flame")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("infinity")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("luck_of_the_sea")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("lure")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("loyalty")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("impaling")) {
+                    return Numbers(8);
+                } else if (enchant.equalsIgnoreCase("riptide")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("channeling")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("multishot")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("quick_charge")) {
+                    return Numbers(5);
+                } else if (enchant.equalsIgnoreCase("piercing")) {
+                    return Numbers(7);
+                } else if (enchant.equalsIgnoreCase("mending")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("curse_vanishing")) {
+                    return Numbers(1);
+                } else if (enchant.equalsIgnoreCase("soul_speed")) {
+                    return Numbers(5);
+                }
             }
         }else if (args.length == 5){
-            if (CustomArmors().contains(args[3].toLowerCase()) ||args[3].equalsIgnoreCase("ellendyte") || args[3].equalsIgnoreCase("corinthium")
-                    || args[3].equalsIgnoreCase("jolixanine") || args[3].equalsIgnoreCase("phosphorus") ||
-                    args[3].equalsIgnoreCase("tungsten") || args[3].equalsIgnoreCase("sapphire") || args[3].equalsIgnoreCase("zinc")
-                    || args[3].equalsIgnoreCase("janelite")){
-                final List<String> completions = new ArrayList<>();
-                completions.addAll(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"
-                        , "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37"
-                        , "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "56"
-                        , "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76"
-                        , "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96"
-                        , "97", "98", "99"));
-                return completions;
+            if (CustomArmors().contains(args[3].toLowerCase())){
+                return Numbers(64);
             }
         }
         return null;
     }
 
+    private List<String> ores(){
+        return new ArrayList<>(Arrays.asList("ellendyte","corinthium","jolixanine","phosphorus","tungsten","sapphire","zinc","janelite"));
+    }
+
+    private List<String> Numbers(int num){
+        List<String> numbers = new ArrayList<>();
+        for (int i = 1;i <= num; i++){
+            numbers.add(String.valueOf(i));
+        }
+        return numbers;
+    }
+
+    private List<String> Enchants(){
+        return new ArrayList<>(Arrays.asList("protection", "fire_protection", "feather_falling","blast_protection",
+                "projectile_protection","respiration","aqua_affinity","thorns","depth_strider","frost_walker",
+                "curse_binding","sharpness","smite","bane_of_arthropods","knockback","fire_aspect","looting",
+                "sweeping_edge","efficiency","silk_touch","unbreaking","fortune","power","punch","flame","infinity",
+                "luck_of_the_sea","lure","loyalty","impaling","riptide","channeling","multishot","quick_charge",
+                "piercing","mending","curse_vanishing","soul_speed"));
+    }
+
     private List<String> CustomArmors(){
-        List<String> armors = new ArrayList<>(Arrays.asList("dragonscale","legionnaire","sage","scale","thief","tribal"));
-        return armors;
+        return new ArrayList<>(Arrays.asList("dragonscale","legionnaire","sage","scale","thief","tribal"));
     }
 }
