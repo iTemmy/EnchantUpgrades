@@ -15,247 +15,248 @@ import org.jetbrains.annotations.NotNull;
 public class getItem implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        //TODO: Add permission check to see if the sender has permission to run the command
-        boolean p;
-        Player player = null;
-        Inventory inv = null;
-        String dragonscale = "dragonscale";
-        String legionnaire = "legionnaire";
-        String sage = "sage";
-        String scale = "scale";
-        String thief = "thief";
-        String tribal = "tribal";
-        if (sender instanceof Player) {
-            player = (Player) sender;
-            inv = player.getInventory();
-            p = true;
-        }
-        if (args[0] != null) {
-            inv = Bukkit.getPlayer(args[0]).getInventory();
-        }
-        if (args != null){
-            if (args[1].equalsIgnoreCase("armor")){
-                if (args[2].equalsIgnoreCase("set")){
-                    if (args[3].equalsIgnoreCase(dragonscale)){
-                        if (player != null){
-                            armor("helmet", "dragonscale", inv, Integer.parseInt(args[4]));
-                            armor("chestplate", "dragonscale", inv, Integer.parseInt(args[4]));
-                            armor("leggings", "dragonscale", inv, Integer.parseInt(args[4]));
-                            armor("boots", "dragonscale", inv, Integer.parseInt(args[4]));
-                            return true;
-                        }
-                    }else if (args[3].equalsIgnoreCase(legionnaire)){
-                        if (player != null){
-                            armor("helmet", "legionnaire", inv, Integer.parseInt(args[4]));
-                            armor("chestplate", "legionnaire", inv, Integer.parseInt(args[4]));
-                            armor("leggings", "legionnaire", inv, Integer.parseInt(args[4]));
-                            armor("boots", "legionnaire", inv, Integer.parseInt(args[4]));
-                            return true;
-                        }
-                    }else if (args[3].equalsIgnoreCase(sage)){
-                        if (player != null){
-                            armor("helmet", "sage", inv, Integer.parseInt(args[4]));
-                            armor("chestplate", "sage", inv, Integer.parseInt(args[4]));
-                            armor("leggings", "sage", inv, Integer.parseInt(args[4]));
-                            armor("boots", "sage", inv, Integer.parseInt(args[4]));
-                            return true;
-                        }
-                    }else if (args[3].equalsIgnoreCase(scale)){
-                        if (player != null){
-                            armor("helmet", "scale", inv, Integer.parseInt(args[4]));
-                            armor("chestplate", "scale", inv, Integer.parseInt(args[4]));
-                            armor("leggings", "scale", inv, Integer.parseInt(args[4]));
-                            armor("boots", "scale", inv, Integer.parseInt(args[4]));
-                            return true;
-                        }
-                    }else if (args[3].equalsIgnoreCase(thief)){
-                        if (player != null){
-                            armor("helmet", "thief", inv, Integer.parseInt(args[4]));
-                            armor("chestplate", "thief", inv, Integer.parseInt(args[4]));
-                            armor("leggings", "thief", inv, Integer.parseInt(args[4]));
-                            armor("boot", "thief", inv, Integer.parseInt(args[4]));
-                            return true;
-                        }
-                    }else if (args[3].equalsIgnoreCase(tribal)){
-                        if (player != null){
-                            armor("helmet", "tribal", inv, Integer.parseInt(args[4]));
-                            armor("chestplate", "tribal", inv, Integer.parseInt(args[4]));
-                            armor("leggings", "tribal", inv, Integer.parseInt(args[4]));
-                            armor("boots", "tribal", inv, Integer.parseInt(args[4]));
-                            return true;
-                        }
-                    }
-                }else if (args[2].equalsIgnoreCase("helmet")){
-                    if (args.length >=5){
-                        armor("helmet", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
-                    }else {
-                        armor("helmet", args[3].toLowerCase(), inv, 1);
-                    }
-                    return true;
-                }else if (args[2].equalsIgnoreCase("chestplate")){
-                    if (args.length >=5){
-                        armor("chestplate", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
-                    }else {
-                        armor("chestplate", args[3].toLowerCase(), inv, 1);
-                    }
-                    return true;
-                }else if (args[2].equalsIgnoreCase("leggings")){
-                    if (args.length >= 5){
-                        armor("leggings", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
-                    }else {
-                        armor("leggings", args[3].toLowerCase(), inv, 1);
-                    }
-                    return true;
-                }else if (args[2].equalsIgnoreCase("boots")){
-                    if (args.length >= 5){
-                        armor("boots", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
-                    }else {
-                        armor("boots", args[3].toLowerCase(), inv, 1);
-                    }
-                    return true;
-                }else{
-                    sender.sendMessage("[Enchant Upgrades] Error: No armor found by that name.");
-                }
-            }else if (args[1].equalsIgnoreCase("ore")){
-                if (args[2].equalsIgnoreCase("ellendyte")){
-                    ItemStack item = Main.getCustomItems().get(Keys.getEllendyte());
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else if (args[2].equalsIgnoreCase("corinthium")){
-                    ItemStack item = (Main.getCustomItems().get(Keys.getCorinthium()));
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else if (args[2].equalsIgnoreCase("jolixanine")){
-                    ItemStack item = (Main.getCustomItems().get(Keys.getJolixanine()));
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else if (args[2].equalsIgnoreCase("phosphorus")){
-                    ItemStack item =(Main.getCustomItems().get(Keys.getPhosphorus()));
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else if (args[2].equalsIgnoreCase("tungsten")){
-                    ItemStack item =(Main.getCustomItems().get(Keys.getTungsten()));
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else if (args[2].equalsIgnoreCase("sapphire")){
-                    ItemStack item =(Main.getCustomItems().get(Keys.getSapphire()));
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else if (args[2].equalsIgnoreCase("zinc")){
-                    ItemStack item =(Main.getCustomItems().get(Keys.getZinc()));
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else if (args[2].equalsIgnoreCase("janelite")){
-                    ItemStack item =Main.getCustomItems().get(Keys.getJanelite());
-                    if (args.length >= 4)
-                        item.setAmount(Integer.parseInt(args[3]));
-                    inv.addItem(item);
-                    return true;
-                }else{
-                    sender.sendMessage("[Enchant Upgrades] Error: No ore found by that name.");
-                }
-            } else if (args[1].equalsIgnoreCase("enchant")) {
-                if (args[2] != null) {
-                    String enchantName = args[2];
-                    int level = 1;
-                    if (args[3] != null){
-                        level = Integer.parseInt(args[3]);
-                    }
-                    if (enchantName.equalsIgnoreCase("protection")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("protection", level)));
-                    } else if (enchantName.equalsIgnoreCase("fire_protection")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("fire_protection", level)));
-                    } else if (enchantName.equalsIgnoreCase("feather_falling")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("feather_falling", level)));
-                    } else if (enchantName.equalsIgnoreCase("blast_protection")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("blast_protection", level)));
-                    } else if (enchantName.equalsIgnoreCase("projectile_protection")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("projectile_protection", level)));
-                    } else if (enchantName.equalsIgnoreCase("respiration")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("respiration", level)));
-                    } else if (enchantName.equalsIgnoreCase("aqua_affinity")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("aqua_affinity", level)));
-                    } else if (enchantName.equalsIgnoreCase("thorns")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("thorns", level)));
-                    } else if (enchantName.equalsIgnoreCase("depth_strider")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("depth_strider", level)));
-                    } else if (enchantName.equalsIgnoreCase("frost_walker")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("frost_walker", level)));
-                    } else if (enchantName.equalsIgnoreCase("curse_binding")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("curse_binding", level)));
-                    } else if (enchantName.equalsIgnoreCase("sharpness")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("sharpness", level)));
-                    } else if (enchantName.equalsIgnoreCase("smite")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("smite", level)));
-                    } else if (enchantName.equalsIgnoreCase("bane_of_arthropods")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("bane_of_arthropods", level)));
-                    } else if (enchantName.equalsIgnoreCase("knockback")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("knockback", level)));
-                    } else if (enchantName.equalsIgnoreCase("fire_aspect")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("fire_aspect", level)));
-                    } else if (enchantName.equalsIgnoreCase("looting")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("looting", level)));
-                    } else if (enchantName.equalsIgnoreCase("sweeping_edge")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("sweeping_edge", level)));
-                    } else if (enchantName.equalsIgnoreCase("efficiency")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("efficiency", level)));
-                    } else if (enchantName.equalsIgnoreCase("silk_touch")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("silk_touch", level)));
-                    } else if (enchantName.equalsIgnoreCase("unbreaking")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("unbreaking", level)));
-                    } else if (enchantName.equalsIgnoreCase("fortune")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("fortune", level)));
-                    } else if (enchantName.equalsIgnoreCase("power")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("power", level)));
-                    } else if (enchantName.equalsIgnoreCase("punch")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("punch", level)));
-                    } else if (enchantName.equalsIgnoreCase("flame")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("flame", level)));
-                    } else if (enchantName.equalsIgnoreCase("infinity")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("infinity",level)));
-                    } else if (enchantName.equalsIgnoreCase("luck_of_the_sea")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("luck_of_the_sea", level)));
-                    } else if (enchantName.equalsIgnoreCase("lure")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("lure", level)));
-                    } else if (enchantName.equalsIgnoreCase("loyalty")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("loyalty", level)));
-                    } else if (enchantName.equalsIgnoreCase("impaling")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("impaling", level)));
-                    } else if (enchantName.equalsIgnoreCase("riptide")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("riptide", level)));
-                    } else if (enchantName.equalsIgnoreCase("channeling")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("channeling", level)));
-                    } else if (enchantName.equalsIgnoreCase("multishot")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("multishot", level)));
-                    } else if (enchantName.equalsIgnoreCase("quick_charge")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("quick_charge", level)));
-                    } else if (enchantName.equalsIgnoreCase("piercing")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("piercing", level)));
-                    } else if (enchantName.equalsIgnoreCase("mending")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("mending", level)));
-                    } else if (enchantName.equalsIgnoreCase("curse_vanishing")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("curse_vanish", level)));
-                    } else if (enchantName.equalsIgnoreCase("soul_speed")) {
-                        inv.addItem(Main.getEnchants().get(EnchantLevelKeys("soul_speed", level)));
-                    }
-                }
+        if (sender.hasPermission("enchantupgrades.getitem")) {
+            boolean p;
+            Player player = null;
+            Inventory inv = null;
+            String dragonscale = "dragonscale";
+            String legionnaire = "legionnaire";
+            String sage = "sage";
+            String scale = "scale";
+            String thief = "thief";
+            String tribal = "tribal";
+            if (sender instanceof Player) {
+                player = (Player) sender;
+                inv = player.getInventory();
+                p = true;
             }
-        }else{
-            sender.sendMessage("[Enchant Upgrades] Error: No arguments provided!");
+            if (args[0] != null) {
+                inv = Bukkit.getPlayer(args[0]).getInventory();
+            }
+            if (args != null) {
+                if (args[1].equalsIgnoreCase("armor")) {
+                    if (args[2].equalsIgnoreCase("set")) {
+                        if (args[3].equalsIgnoreCase(dragonscale)) {
+                            if (player != null) {
+                                armor("helmet", "dragonscale", inv, Integer.parseInt(args[4]));
+                                armor("chestplate", "dragonscale", inv, Integer.parseInt(args[4]));
+                                armor("leggings", "dragonscale", inv, Integer.parseInt(args[4]));
+                                armor("boots", "dragonscale", inv, Integer.parseInt(args[4]));
+                                return true;
+                            }
+                        } else if (args[3].equalsIgnoreCase(legionnaire)) {
+                            if (player != null) {
+                                armor("helmet", "legionnaire", inv, Integer.parseInt(args[4]));
+                                armor("chestplate", "legionnaire", inv, Integer.parseInt(args[4]));
+                                armor("leggings", "legionnaire", inv, Integer.parseInt(args[4]));
+                                armor("boots", "legionnaire", inv, Integer.parseInt(args[4]));
+                                return true;
+                            }
+                        } else if (args[3].equalsIgnoreCase(sage)) {
+                            if (player != null) {
+                                armor("helmet", "sage", inv, Integer.parseInt(args[4]));
+                                armor("chestplate", "sage", inv, Integer.parseInt(args[4]));
+                                armor("leggings", "sage", inv, Integer.parseInt(args[4]));
+                                armor("boots", "sage", inv, Integer.parseInt(args[4]));
+                                return true;
+                            }
+                        } else if (args[3].equalsIgnoreCase(scale)) {
+                            if (player != null) {
+                                armor("helmet", "scale", inv, Integer.parseInt(args[4]));
+                                armor("chestplate", "scale", inv, Integer.parseInt(args[4]));
+                                armor("leggings", "scale", inv, Integer.parseInt(args[4]));
+                                armor("boots", "scale", inv, Integer.parseInt(args[4]));
+                                return true;
+                            }
+                        } else if (args[3].equalsIgnoreCase(thief)) {
+                            if (player != null) {
+                                armor("helmet", "thief", inv, Integer.parseInt(args[4]));
+                                armor("chestplate", "thief", inv, Integer.parseInt(args[4]));
+                                armor("leggings", "thief", inv, Integer.parseInt(args[4]));
+                                armor("boot", "thief", inv, Integer.parseInt(args[4]));
+                                return true;
+                            }
+                        } else if (args[3].equalsIgnoreCase(tribal)) {
+                            if (player != null) {
+                                armor("helmet", "tribal", inv, Integer.parseInt(args[4]));
+                                armor("chestplate", "tribal", inv, Integer.parseInt(args[4]));
+                                armor("leggings", "tribal", inv, Integer.parseInt(args[4]));
+                                armor("boots", "tribal", inv, Integer.parseInt(args[4]));
+                                return true;
+                            }
+                        }
+                    } else if (args[2].equalsIgnoreCase("helmet")) {
+                        if (args.length >= 5) {
+                            armor("helmet", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
+                        } else {
+                            armor("helmet", args[3].toLowerCase(), inv, 1);
+                        }
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("chestplate")) {
+                        if (args.length >= 5) {
+                            armor("chestplate", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
+                        } else {
+                            armor("chestplate", args[3].toLowerCase(), inv, 1);
+                        }
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("leggings")) {
+                        if (args.length >= 5) {
+                            armor("leggings", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
+                        } else {
+                            armor("leggings", args[3].toLowerCase(), inv, 1);
+                        }
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("boots")) {
+                        if (args.length >= 5) {
+                            armor("boots", args[3].toLowerCase(), inv, Integer.parseInt(args[4]));
+                        } else {
+                            armor("boots", args[3].toLowerCase(), inv, 1);
+                        }
+                        return true;
+                    } else {
+                        sender.sendMessage("[Enchant Upgrades] Error: No armor found by that name.");
+                    }
+                } else if (args[1].equalsIgnoreCase("ore")) {
+                    if (args[2].equalsIgnoreCase("ellendyte")) {
+                        ItemStack item = Main.getCustomItems().get(Keys.getEllendyte());
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("corinthium")) {
+                        ItemStack item = (Main.getCustomItems().get(Keys.getCorinthium()));
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("jolixanine")) {
+                        ItemStack item = (Main.getCustomItems().get(Keys.getJolixanine()));
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("phosphorus")) {
+                        ItemStack item = (Main.getCustomItems().get(Keys.getPhosphorus()));
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("tungsten")) {
+                        ItemStack item = (Main.getCustomItems().get(Keys.getTungsten()));
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("sapphire")) {
+                        ItemStack item = (Main.getCustomItems().get(Keys.getSapphire()));
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("zinc")) {
+                        ItemStack item = (Main.getCustomItems().get(Keys.getZinc()));
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else if (args[2].equalsIgnoreCase("janelite")) {
+                        ItemStack item = Main.getCustomItems().get(Keys.getJanelite());
+                        if (args.length >= 4)
+                            item.setAmount(Integer.parseInt(args[3]));
+                        inv.addItem(item);
+                        return true;
+                    } else {
+                        sender.sendMessage("[Enchant Upgrades] Error: No ore found by that name.");
+                    }
+                } else if (args[1].equalsIgnoreCase("enchant")) {
+                    if (args[2] != null) {
+                        String enchantName = args[2];
+                        int level = 1;
+                        if (args[3] != null) {
+                            level = Integer.parseInt(args[3]);
+                        }
+                        if (enchantName.equalsIgnoreCase("protection")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("protection", level)));
+                        } else if (enchantName.equalsIgnoreCase("fire_protection")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("fire_protection", level)));
+                        } else if (enchantName.equalsIgnoreCase("feather_falling")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("feather_falling", level)));
+                        } else if (enchantName.equalsIgnoreCase("blast_protection")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("blast_protection", level)));
+                        } else if (enchantName.equalsIgnoreCase("projectile_protection")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("projectile_protection", level)));
+                        } else if (enchantName.equalsIgnoreCase("respiration")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("respiration", level)));
+                        } else if (enchantName.equalsIgnoreCase("aqua_affinity")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("aqua_affinity", level)));
+                        } else if (enchantName.equalsIgnoreCase("thorns")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("thorns", level)));
+                        } else if (enchantName.equalsIgnoreCase("depth_strider")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("depth_strider", level)));
+                        } else if (enchantName.equalsIgnoreCase("frost_walker")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("frost_walker", level)));
+                        } else if (enchantName.equalsIgnoreCase("curse_binding")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("curse_binding", level)));
+                        } else if (enchantName.equalsIgnoreCase("sharpness")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("sharpness", level)));
+                        } else if (enchantName.equalsIgnoreCase("smite")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("smite", level)));
+                        } else if (enchantName.equalsIgnoreCase("bane_of_arthropods")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("bane_of_arthropods", level)));
+                        } else if (enchantName.equalsIgnoreCase("knockback")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("knockback", level)));
+                        } else if (enchantName.equalsIgnoreCase("fire_aspect")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("fire_aspect", level)));
+                        } else if (enchantName.equalsIgnoreCase("looting")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("looting", level)));
+                        } else if (enchantName.equalsIgnoreCase("sweeping_edge")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("sweeping_edge", level)));
+                        } else if (enchantName.equalsIgnoreCase("efficiency")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("efficiency", level)));
+                        } else if (enchantName.equalsIgnoreCase("silk_touch")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("silk_touch", level)));
+                        } else if (enchantName.equalsIgnoreCase("unbreaking")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("unbreaking", level)));
+                        } else if (enchantName.equalsIgnoreCase("fortune")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("fortune", level)));
+                        } else if (enchantName.equalsIgnoreCase("power")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("power", level)));
+                        } else if (enchantName.equalsIgnoreCase("punch")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("punch", level)));
+                        } else if (enchantName.equalsIgnoreCase("flame")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("flame", level)));
+                        } else if (enchantName.equalsIgnoreCase("infinity")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("infinity", level)));
+                        } else if (enchantName.equalsIgnoreCase("luck_of_the_sea")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("luck_of_the_sea", level)));
+                        } else if (enchantName.equalsIgnoreCase("lure")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("lure", level)));
+                        } else if (enchantName.equalsIgnoreCase("loyalty")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("loyalty", level)));
+                        } else if (enchantName.equalsIgnoreCase("impaling")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("impaling", level)));
+                        } else if (enchantName.equalsIgnoreCase("riptide")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("riptide", level)));
+                        } else if (enchantName.equalsIgnoreCase("channeling")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("channeling", level)));
+                        } else if (enchantName.equalsIgnoreCase("multishot")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("multishot", level)));
+                        } else if (enchantName.equalsIgnoreCase("quick_charge")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("quick_charge", level)));
+                        } else if (enchantName.equalsIgnoreCase("piercing")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("piercing", level)));
+                        } else if (enchantName.equalsIgnoreCase("mending")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("mending", level)));
+                        } else if (enchantName.equalsIgnoreCase("curse_vanishing")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("curse_vanish", level)));
+                        } else if (enchantName.equalsIgnoreCase("soul_speed")) {
+                            inv.addItem(Main.getEnchants().get(EnchantLevelKeys("soul_speed", level)));
+                        }
+                    }
+                }
+            } else {
+                sender.sendMessage("[Enchant Upgrades] Error: No arguments provided!");
+            }
         }
         return false;
     }
