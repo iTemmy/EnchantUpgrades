@@ -20,6 +20,9 @@ public class Sharpness {
         Sharpness3();
         Sharpness4();
         Sharpness5();
+        Sharpness6();
+        Sharpness7();
+        Sharpness8();
     }
 
     private void Sharpness1(){
@@ -85,5 +88,35 @@ public class Sharpness {
         recipe.setIngredient('S', Main.getEnchants().get(Keys.getSharpness4()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getSharpness5(), item);
+    }
+
+    private void Sharpness6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_ALL, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSharpness6(), item);
+        //TODO: Add recipe for Sharpness 6
+        Main.getEnchants().put(Keys.getSharpness6(), item);
+    }
+
+    private void Sharpness7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_ALL, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSharpness7(), item);
+        //TODO: Add recipe for Sharpness 7
+        Main.getEnchants().put(Keys.getSharpness7(), item);
+    }
+
+    private void Sharpness8(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_ALL, 8, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSharpness8(), item);
+        //TODO: Add recipe for Sharpness 8
+        Main.getEnchants().put(Keys.getSharpness8(), item);
     }
 }

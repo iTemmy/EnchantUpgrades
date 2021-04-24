@@ -40,6 +40,7 @@ public class Keys {
     private static final NamespacedKey ImbuedCushion = new NamespacedKey(plugin, "ImbuedCushion");
     private static final NamespacedKey ImbuedQuickening = new NamespacedKey(plugin, "ImbuedQuickening");
     private static final NamespacedKey ImbuedSilk = new NamespacedKey(plugin, "ImbuedSilk");
+    private static final NamespacedKey ImbuedUndead = new NamespacedKey(plugin, "ImbuedUndead");
     private static final NamespacedKey OxidizedSerum = new NamespacedKey(plugin, "OxidizedSerum");
     private static final NamespacedKey OceanicEssence = new NamespacedKey(plugin, "OceanicEssence");
     private static final NamespacedKey ImbuedHardening = new NamespacedKey(plugin, "ImbuedEssence");
@@ -374,6 +375,12 @@ public class Keys {
     private static final NamespacedKey SageSet = new NamespacedKey(plugin, "SageSet");
     private static final NamespacedKey ScaleSet = new NamespacedKey(plugin, "ScaleSet");
     private static final NamespacedKey DragonScaleSet = new NamespacedKey(plugin, "DragonScaleSet");
+    private static final NamespacedKey DrugarthsHunterSword1 = new NamespacedKey(plugin, "DrugarthsHunterSword1");
+    private static final NamespacedKey DrugarthsHunterSword2 = new NamespacedKey(plugin, "DrugarthsHunterSword2");
+    private static final NamespacedKey DrugarthsHunterSword3 = new NamespacedKey(plugin, "DrugarthsHunterSword3");
+    private static final NamespacedKey DrugarthsHunterSword4 = new NamespacedKey(plugin, "DrugarthsHunterSword4");
+    private static final NamespacedKey DrugarthsHunterSword5 = new NamespacedKey(plugin, "DrugarthsHunterSword5");
+    private static final NamespacedKey DrugarthsHunterSword10 = new NamespacedKey(plugin, "DrugarthsHunterSword10");
 
     private static final Collection<NamespacedKey> KEYS = Arrays.asList(getPricklyEssence(),getCushionEssence(),getStriderEssence(),
             getOxidizedEssence(),getLureEssence(),getFrostEssence(),getHardeningEssence(),getLuckEssence(),getMobEssence(),
@@ -533,6 +540,7 @@ public class Keys {
     public static NamespacedKey getImbuedBlaze(){
         return ImbuedBlaze;
     }
+    public static NamespacedKey getImbuedUndead(){return ImbuedUndead;}
 
     public static NamespacedKey getObsidianMacuahuitl(){
         return ObsidianMacuahuitl;
@@ -916,4 +924,10 @@ public class Keys {
     public static NamespacedKey getScaleSet(){return ScaleSet;}
     public static NamespacedKey getDragonScaleSet(){return DragonScaleSet;}
     public static NamespacedKey getCustomArmor(){return CustomArmor;}
+    public static NamespacedKey getDrugarthsHunterSword1(){return DrugarthsHunterSword1;}
+    public static NamespacedKey getDrugarthsHunterSword2(){return DrugarthsHunterSword2;}
+    public static NamespacedKey getDrugarthsHunterSword3(){return DrugarthsHunterSword3;}
+    public static NamespacedKey getDrugarthsHunterSword4(){return DrugarthsHunterSword4;}
+    public static NamespacedKey getDrugarthsHunterSword5(){return DrugarthsHunterSword5;}
+    public static NamespacedKey getDrugarthsHunterSword10(){return DrugarthsHunterSword10;}
 }

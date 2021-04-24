@@ -16,6 +16,9 @@ public class Piercing {
         Piercing2();
         Piercing3();
         Piercing4();
+        Piercing5();
+        Piercing6();
+        Piercing7();
     }
 
     private void Piercing1(){
@@ -68,5 +71,35 @@ public class Piercing {
         recipe.setIngredient('P', Main.getEnchants().get(Keys.getPiercing3()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getPiercing4(), item);
+    }
+
+    private void Piercing5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PIERCING, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getPiercing5(), item);
+        //TODO: Add recipe for Piercing 5
+        Main.getEnchants().put(Keys.getPiercing5(), item);
+    }
+
+    private void Piercing6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PIERCING, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getPiercing6(), item);
+        //TODO: Add recipe for Piercing 6
+        Main.getEnchants().put(Keys.getPiercing6(), item);
+    }
+
+    private void Piercing7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PIERCING, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getPiercing7(), item);
+        //TODO: Add recipe for Piercing 7
+        Main.getEnchants().put(Keys.getPiercing7(), item);
     }
 }

@@ -55,4 +55,24 @@ public class Thorns {
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getThorns3(), item);
     }
+
+    private void Thorns4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.THORNS, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getThorns4(), item);
+        //TODO: Add recipe for Thorns 4
+        Main.getEnchants().put(Keys.getThorns4(), item);
+    }
+
+    private void Thorns5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.THORNS, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getThorns5(), item);
+        //TODO: Add recipe for Thorns 5
+        Main.getEnchants().put(Keys.getThorns5(), item);
+    }
 }

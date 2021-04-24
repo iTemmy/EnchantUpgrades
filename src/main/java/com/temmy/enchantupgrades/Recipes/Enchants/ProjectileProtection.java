@@ -18,6 +18,9 @@ public class ProjectileProtection {
         ProjectileProtection2();
         ProjectileProtection3();
         ProjectileProtection4();
+        ProjectileProtection5();
+        ProjectileProtection6();
+        ProjectileProtection7();
     }
 
     private void ProjectileProtection1(){
@@ -70,5 +73,35 @@ public class ProjectileProtection {
         recipe.setIngredient('B', Main.getEnchants().get(Keys.getProjectileProtection3()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getProjectileProtection4(), item);
+    }
+
+    private void ProjectileProtection5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_PROJECTILE, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getProjectileProtection5(), item);
+        //TODO:: Add recipe for Projectile Protection 5
+        Main.getEnchants().put(Keys.getProjectileProtection5(), item);
+    }
+
+    private void ProjectileProtection6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_PROJECTILE, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getProjectileProtection6(), item);
+        //TODO: Add recipe for Projectile Protection 6
+        Main.getEnchants().put(Keys.getProjectileProtection6(), item);
+    }
+
+    private void ProjectileProtection7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_PROJECTILE, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getProjectileProtection7(), item);
+        //TODO: Add recipe for Projectile Protection 7
+        Main.getEnchants().put(Keys.getProjectileProtection7(), item);
     }
 }

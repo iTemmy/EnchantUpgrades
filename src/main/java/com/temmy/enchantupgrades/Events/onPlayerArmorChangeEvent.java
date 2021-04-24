@@ -33,7 +33,6 @@ public class onPlayerArmorChangeEvent implements Listener {
             }
         }
         onPlayerJoinEvent.CheckArmor(e.getPlayer().getInventory().getArmorContents(), e.getPlayer());
-        // TODO: Need to make it check if putting on new armor and if so remove old effects then add new ones if they have effects for new armor.
     }
 
     /**

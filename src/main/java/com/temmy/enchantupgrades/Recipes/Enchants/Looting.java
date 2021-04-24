@@ -55,4 +55,24 @@ public class Looting {
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getLooting3(), item);
     }
+
+    private void Looting4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LOOT_BONUS_MOBS, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLooting4(), item);
+        //TODO: Add recipe for Looting 4
+        Main.getEnchants().put(Keys.getLooting4(), item);
+    }
+
+    private void Looting5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LOOT_BONUS_MOBS, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLooting5(), item);
+        //TODO: Add recipe for Looting 5
+        Main.getEnchants().put(Keys.getLooting5(), item);
+    }
 }

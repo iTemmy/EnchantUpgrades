@@ -67,7 +67,7 @@ public class Sage {
         meta.addEnchant(Enchantment.DURABILITY, 5, true);
         List<Component> lore = new ArrayList<>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing(1)"),
                 Component.text(ChatColor.RED+"Dolphin's grace"),
-                Component.text(ChatColor.GOLD+"FUll Set Bonus:"),
+                Component.text(ChatColor.GOLD+"Full Set Bonus:"),
                 Component.text(ChatColor.RED+"Fire Resistance"),
                 Component.text(ChatColor.RED+"No Oxygen Loss"),
                 Component.text(ChatColor.RED+"Resistance 2")));
@@ -96,7 +96,7 @@ public class Sage {
         meta.addEnchant(Enchantment.DURABILITY, 5, true);
         List<Component> lore = new ArrayList<>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing(1)"),
                 Component.text(ChatColor.RED+"Dolphin's grace"),
-                Component.text(ChatColor.GOLD+"FUll Set Bonus:"),
+                Component.text(ChatColor.GOLD+"Full Set Bonus:"),
                 Component.text(ChatColor.RED+"Fire Resistance"),
                 Component.text(ChatColor.RED+"No Oxygen Loss"),
                 Component.text(ChatColor.RED+"Resistance 2")));
@@ -125,7 +125,7 @@ public class Sage {
         meta.addEnchant(Enchantment.DURABILITY, 5, true);
         List<Component> lore = new ArrayList<>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing(1)"),
                 Component.text(ChatColor.RED+"Dolphin's grace"),
-                Component.text(ChatColor.GOLD+"FUll Set Bonus:"),
+                Component.text(ChatColor.GOLD+"Full Set Bonus:"),
                 Component.text(ChatColor.RED+"Fire Resistance"),
                 Component.text(ChatColor.RED+"No Oxygen Loss"),
                 Component.text(ChatColor.RED+"Resistance 2")));

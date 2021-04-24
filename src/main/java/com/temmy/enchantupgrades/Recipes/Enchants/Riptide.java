@@ -15,6 +15,8 @@ public class Riptide {
         RipTide1();
         Riptide2();
         Riptide3();
+        Riptide4();
+        Riptide5();
     }
 
     private void RipTide1(){
@@ -60,5 +62,25 @@ public class Riptide {
         recipe.setIngredient('R', Material.REDSTONE);
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getRiptide3(), item);
+    }
+
+    private void Riptide4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.RIPTIDE, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getRiptide4(), item);
+        //TODO: Add recipe for Riptide 4
+        Main.getEnchants().put(Keys.getRiptide4(), item);
+    }
+
+    private void Riptide5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.RIPTIDE, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getRiptide5(), item);
+        //TODO: Add recipe for Riptide 5
+        Main.getEnchants().put(Keys.getRiptide5(), item);
     }
 }

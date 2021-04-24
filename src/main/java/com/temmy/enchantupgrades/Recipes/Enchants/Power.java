@@ -83,4 +83,34 @@ public class Power {
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getPower5(), item);
     }
+
+    private void Power6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.ARROW_DAMAGE, 6, false);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getPower6(), item);
+        //TODO: Add recipe for Power 6
+        Main.getEnchants().put(Keys.getPower6(), item);
+    }
+
+    private void Power7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.ARROW_DAMAGE, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getPower7(), item);
+        //TODO: Add recipe for Power 7
+        Main.getEnchants().put(Keys.getPower7(), item);
+    }
+
+    private void Power8(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.ARROW_DAMAGE, 8, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getPower8(), item);
+        //TODO: Add recipe for Power 8
+        Main.getEnchants().put(Keys.getPower8(), item);
+    }
 }

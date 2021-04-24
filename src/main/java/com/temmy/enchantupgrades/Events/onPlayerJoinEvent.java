@@ -27,7 +27,6 @@ public class onPlayerJoinEvent implements Listener {
      * @param player
      */
     public static void CheckArmor(ItemStack[] armors, Player player){
-        //TODO: need to make check to see if player has full set on and if so apply full set effect
         int armorSet = 0;
         boolean dragon;
         boolean scale;

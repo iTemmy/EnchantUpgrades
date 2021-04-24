@@ -14,6 +14,7 @@ public class Punch {
     public Punch(){
         Punch1();
         Punch2();
+        Punch3();
     }
 
     private void Punch1(){
@@ -44,5 +45,15 @@ public class Punch {
         recipe.setIngredient('E', Main.getEnchants().get(Keys.getPunch1()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getPunch2(), item);
+    }
+
+    private void Punch3(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.ARROW_KNOCKBACK, 3, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getPunch3(), item);
+        //TODO: Add recipe for Punch 3
+        Main.getEnchants().put(Keys.getPunch3(), item);
     }
 }

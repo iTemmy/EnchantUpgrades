@@ -15,6 +15,8 @@ public class SoulSpeed {
         SoulSpeed1();
         SoulSpeed2();
         SoulSpeed3();
+        SoulSpeed4();
+        SoulSpeed5();
     }
 
     private void SoulSpeed1() {
@@ -54,5 +56,25 @@ public class SoulSpeed {
         recipe.setIngredient('S', Main.getEnchants().get(Keys.getSoulSpeed2()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getSoulSpeed3(), item);
+    }
+
+    private void SoulSpeed4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.SOUL_SPEED, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSoulSpeed4(), item);
+        //TODO: Add recipe for Soul Speed 4
+        Main.getEnchants().put(Keys.getSoulSpeed4(), item);
+    }
+
+    private void SoulSpeed5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.SOUL_SPEED, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSoulSpeed5(), item);
+        //TODO: Add recipe for Soul Speed 5
+        Main.getEnchants().put(Keys.getSoulSpeed5(), item);
     }
 }

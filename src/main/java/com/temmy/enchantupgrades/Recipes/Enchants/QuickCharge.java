@@ -15,6 +15,8 @@ public class QuickCharge {
         QuickCharge1();
         QuickCharge2();
         QuickCharge3();
+        QuickCharge4();
+        QuickCharge5();
     }
 
     private void QuickCharge1(){
@@ -57,5 +59,25 @@ public class QuickCharge {
         recipe.setIngredient('R', Main.getEssences().get(Keys.getQuickeningEssence()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getQuickCharge3(), item);
+    }
+
+    private void QuickCharge4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.QUICK_CHARGE, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getQuickCharge4(), item);
+        //TODO: Add recipe for Quick Charge 4
+        Main.getEnchants().put(Keys.getQuickCharge4(), item);
+    }
+
+    private void QuickCharge5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.QUICK_CHARGE, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getQuickCharge5(), item);
+        //TODO: Add recipe for Quick Charge 5
+        Main.getEnchants().put(Keys.getQuickCharge5(), item);
     }
 }

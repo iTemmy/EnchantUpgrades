@@ -38,7 +38,9 @@ public class Tribal {
         List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing(1)"),
                 Component.text(ChatColor.AQUA+"Haste 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.AQUA+"Haste 3, Resistance 1, Jump Boost 2")));
+                Component.text(ChatColor.AQUA+"Haste 3"),
+                Component.text(ChatColor.AQUA+"Resistance 1"),
+                Component.text(ChatColor.AQUA+"Jump Boost 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectHaste(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectHaste(), PersistentDataType.INTEGER, 3);
@@ -64,7 +66,9 @@ public class Tribal {
         List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing(1)"),
                 Component.text(ChatColor.AQUA+"Haste 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.AQUA+"Haste 3, Resistance 1, Jump Boost 2")));
+                Component.text(ChatColor.AQUA+"Haste 3"),
+                Component.text(ChatColor.AQUA+"Resistance 1"),
+                Component.text(ChatColor.AQUA+"Jump Boost 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectHaste(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectHaste(), PersistentDataType.INTEGER, 3);
@@ -90,7 +94,9 @@ public class Tribal {
         List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing(1)"),
                 Component.text(ChatColor.AQUA+"Haste 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.AQUA+"Haste 3, Resistance 1, Jump Boost 2")));
+                Component.text(ChatColor.AQUA+"Haste 3"),
+                Component.text(ChatColor.AQUA+"Resistance 1"),
+                Component.text(ChatColor.AQUA+"Jump Boost 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectHaste(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectHaste(), PersistentDataType.INTEGER, 3);
@@ -116,7 +122,9 @@ public class Tribal {
         List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing(1)"),
                 Component.text(ChatColor.AQUA+"Haste 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.AQUA+"Haste 3, Resistance 1, Jump Boost 2")));
+                Component.text(ChatColor.AQUA+"Haste 3"),
+                Component.text(ChatColor.AQUA+"Resistance 1"),
+                Component.text(ChatColor.AQUA+"Jump Boost 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectHaste(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectHaste(), PersistentDataType.INTEGER, 3);

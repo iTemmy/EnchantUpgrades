@@ -58,4 +58,24 @@ public class Loyalty {
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getLoyalty3(), item);
     }
+
+    private void Loyalty4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LOYALTY, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLoyalty4(), item);
+        //TODO: Add recipe for Loyalty 4
+        Main.getEnchants().put(Keys.getLooting4(), item);
+    }
+
+    private void Loyalty5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LOYALTY, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLooting5(), item);
+        //TODO: Add recipe for Loyalty 5
+        Main.getEnchants().put(Keys.getLooting5(), item);
+    }
 }

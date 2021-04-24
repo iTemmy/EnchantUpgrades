@@ -15,6 +15,8 @@ public class Fortune {
         Fortune1();
         Fortune2();
         Fortune3();
+        Fortune4();
+        Fortune5();
     }
 
     private void Fortune1(){
@@ -54,5 +56,25 @@ public class Fortune {
         recipe.setIngredient('E', Main.getEnchants().get(Keys.getFortune2()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getFortune3(), item);
+    }
+
+    private void Fortune4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LOOT_BONUS_BLOCKS, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFortune4(), item);
+        //TODO: Add recipe for Fortune 4
+        Main.getEnchants().put(Keys.getFortune4(), item);
+    }
+
+    private void Fortune5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LOOT_BONUS_BLOCKS, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFortune5(), item);
+        //TODO: Add recipe for Fortune 5
+        Main.getEnchants().put(Keys.getFortune5(), item);
     }
 }

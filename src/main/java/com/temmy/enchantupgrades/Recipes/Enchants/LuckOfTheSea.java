@@ -15,6 +15,8 @@ public class LuckOfTheSea {
         LuckOfTheSea1();
         LuckOfTheSea2();
         LuckOfTheSea3();
+        LuckOfTheSea4();
+        LuckOfTheSea5();
     }
 
     private void LuckOfTheSea1(){
@@ -54,5 +56,25 @@ public class LuckOfTheSea {
         recipe.setIngredient('L', Main.getEnchants().get(Keys.getLuckOfTheSea2()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getLuckOfTheSea3(), item);
+    }
+
+    private void LuckOfTheSea4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LUCK, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLuckOfTheSea4(), item);
+        //TODO: Add recipe for Luck Of the Sea 4
+        Main.getEnchants().put(Keys.getLuckOfTheSea4(), item);
+    }
+
+    private void LuckOfTheSea5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LUCK, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLuckOfTheSea5(), item);
+        //TODO: Add recipe for Luck Of the Sea 5
+        Main.getEnchants().put(Keys.getLuckOfTheSea5(), item);
     }
 }

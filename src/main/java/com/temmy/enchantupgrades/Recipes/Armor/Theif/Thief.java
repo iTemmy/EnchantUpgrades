@@ -38,7 +38,9 @@ public class Thief {
         List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing (1)"),
                 Component.text(ChatColor.GREEN+"Speed 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.GREEN+"Speed 3, Resistance 1, Strength 2")));
+                Component.text(ChatColor.GREEN+"Speed 3"),
+                Component.text(ChatColor.GREEN+"Resistance 1"),
+                Component.text(ChatColor.GREEN+"Strength 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectSpeed(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectSpeed(), PersistentDataType.INTEGER, 3);
@@ -61,10 +63,12 @@ public class Thief {
         meta.displayName(Component.text(ChatColor.GREEN+""+ChatColor.BOLD+"Thief's Chestplate"));
         meta.addEnchant(Enchantment.PROTECTION_PROJECTILE, 4, true);
         meta.addEnchant(Enchantment.DURABILITY, 5,true);
-        List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing (1)")
-                ,Component.text(ChatColor.GREEN+"Speed 1"),
+        List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing (1)"),
+                Component.text(ChatColor.GREEN+"Speed 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.GREEN+"Speed 3, Resistance 1, Strength 2")));
+                Component.text(ChatColor.GREEN+"Speed 3"),
+                Component.text(ChatColor.GREEN+"Resistance 1"),
+                Component.text(ChatColor.GREEN+"Strength 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectSpeed(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectSpeed(), PersistentDataType.INTEGER, 3);
@@ -87,10 +91,12 @@ public class Thief {
         meta.displayName(Component.text(ChatColor.GREEN+""+ChatColor.BOLD+"Thief's Leggings"));
         meta.addEnchant(Enchantment.PROTECTION_PROJECTILE, 4, true);
         meta.addEnchant(Enchantment.DURABILITY, 5,true);
-        List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing (1)")
-                ,Component.text(ChatColor.GREEN+"Speed 1"),
+        List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing (1)"),
+                Component.text(ChatColor.GREEN+"Speed 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.GREEN+"Speed 3, Resistance 1, Strength 2")));
+                Component.text(ChatColor.GREEN+"Speed 3"),
+                Component.text(ChatColor.GREEN+"Resistance 1"),
+                Component.text(ChatColor.GREEN+"Strength 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectSpeed(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectSpeed(), PersistentDataType.INTEGER, 3);
@@ -113,10 +119,12 @@ public class Thief {
         meta.displayName(Component.text(ChatColor.GREEN+""+ChatColor.BOLD+"Thief's Boots"));
         meta.addEnchant(Enchantment.PROTECTION_PROJECTILE, 4, true);
         meta.addEnchant(Enchantment.DURABILITY, 5,true);
-        List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing (1)")
-                ,Component.text(ChatColor.GREEN+"Speed 1"),
+        List<Component> lore = new ArrayList<Component>(Arrays.asList(Component.text(ChatColor.GOLD+"Wearing (1)"),
+                Component.text(ChatColor.GREEN+"Speed 1"),
                 Component.text(ChatColor.GOLD+"Full Set Bonus:"),
-                Component.text(ChatColor.GREEN+"Speed 3, Resistance 1, Strength 2")));
+                Component.text(ChatColor.GREEN+"Speed 3"),
+                Component.text(ChatColor.GREEN+"Resistance 1"),
+                Component.text(ChatColor.GREEN+"Strength 2")));
         meta.lore(lore);
         meta.getPersistentDataContainer().set(Keys.getSingleEffectSpeed(), PersistentDataType.INTEGER, 1);
         meta.getPersistentDataContainer().set(Keys.getFullSetEffectSpeed(), PersistentDataType.INTEGER, 3);

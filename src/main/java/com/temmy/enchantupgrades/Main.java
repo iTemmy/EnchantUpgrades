@@ -14,6 +14,7 @@ import com.temmy.enchantupgrades.Recipes.Enchants.*;
 import com.temmy.enchantupgrades.Recipes.Essences;
 import com.temmy.enchantupgrades.Recipes.ImbuedEssences;
 import com.temmy.enchantupgrades.Recipes.ObsidianMacuahuitl;
+import com.temmy.enchantupgrades.Recipes.Weapons.DrugarthsHunterSword;
 import com.temmy.enchantupgrades.TabCompletions.getItemTabCompleter;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -120,5 +121,6 @@ public final class Main extends JavaPlugin {
         new Scale();
         new Dragonscale();
         new ObsidianMacuahuitl();
+        new DrugarthsHunterSword();
     }
 }

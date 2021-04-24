@@ -14,6 +14,7 @@ public class FrostWalker {
     public FrostWalker(){
         FrostWalker1();
         FrostWalker2();
+        FrostWalker3();
     }
 
     private void FrostWalker1(){
@@ -29,7 +30,7 @@ public class FrostWalker {
         Main.getEnchants().put(Keys.getFrostWalker1(), item);
     }
 
-    public void FrostWalker2(){
+    private void FrostWalker2(){
         ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
         EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
         EMeta.addStoredEnchant(Enchantment.FROST_WALKER, 2, false);
@@ -40,5 +41,15 @@ public class FrostWalker {
         recipe.setIngredient('B', Main.getEnchants().get(Keys.getFrostWalker1()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getFrostWalker2(), item);
+    }
+
+    private void FrostWalker3(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.FROST_WALKER, 3, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getFrostWalker3(), item);
+        //TODO: Add recipe for Frost Walker 3
+        Main.getEnchants().put(Keys.getFrostWalker3(), item);
     }
 }

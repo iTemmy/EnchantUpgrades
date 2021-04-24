@@ -99,8 +99,6 @@ public class Effects {
      */
     public static void removeArmorEffects(NamespacedKey key, Player player){
         if (key != null && player != null){
-            //TODO: Test this statement and see if I can replace the if statement with it
-            // player.removePotionEffect(Objects.requireNonNull(PotionEffectType.getByName(key.value())));
             if (key.equals(Keys.getEffectSpeed())){
                 player.removePotionEffect(PotionEffectType.SPEED);
             }else if (key.equals(Keys.getEffectSlowness())){

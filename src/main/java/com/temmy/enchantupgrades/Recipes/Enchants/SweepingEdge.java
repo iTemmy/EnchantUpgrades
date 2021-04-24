@@ -15,6 +15,8 @@ public class SweepingEdge {
         SweepingEdge1();
         SweepingEdge2();
         SweepingEdge3();
+        SweepingEdge4();
+        SweepingEdge5();
     }
 
     private void SweepingEdge1(){
@@ -54,5 +56,25 @@ public class SweepingEdge {
         recipe.setIngredient('E', Main.getEnchants().get(Keys.getSweepingEdge2()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getSweepingEdge3(), item);
+    }
+
+    private void SweepingEdge4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.SWEEPING_EDGE, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSweepingEdge4(), item);
+        //TODO: Add recipe for Sweeping Edge 4
+        Main.getEnchants().put(Keys.getSweepingEdge4(), item);
+    }
+
+    private void SweepingEdge5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.SWEEPING_EDGE, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSweepingEdge5(), item);
+        //TODO: Add recipe for Sweeping Edge 5
+        Main.getEnchants().put(Keys.getSweepingEdge5(), item);
     }
 }

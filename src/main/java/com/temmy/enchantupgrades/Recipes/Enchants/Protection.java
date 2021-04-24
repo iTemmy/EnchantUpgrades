@@ -18,6 +18,9 @@ public class Protection {
         Protection2();
         Protection3();
         Protection4();
+        Protection5();
+        Protection6();
+        Protection7();
     }
 
     private void Protection1(){
@@ -70,5 +73,35 @@ public class Protection {
         recipe.setIngredient('B', Main.getEnchants().get(Keys.getProtection3()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getProtection4(), item);
+    }
+
+    private void Protection5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getProtection5(), item);
+        //TODO: Add recipe for Protection 5
+        Main.getEnchants().put(Keys.getProtection5(), item);
+    }
+
+    private void Protection6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getProtection6(), item);
+        //TODO: Add recipe for Protection 6
+        Main.getEnchants().put(Keys.getProtection6(), item);
+    }
+
+    private void Protection7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getProtection7(), item);
+        //TODO: Add recipe for Protection 7
+        Main.getEnchants().put(Keys.getProtection7(), item);
     }
 }

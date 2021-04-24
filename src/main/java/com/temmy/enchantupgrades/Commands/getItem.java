@@ -15,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 public class getItem implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        //TODO: Add permission check to see if the sender has permission to run the command
         boolean p;
         Player player = null;
         Inventory inv = null;

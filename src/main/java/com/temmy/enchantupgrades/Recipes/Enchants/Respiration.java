@@ -15,6 +15,8 @@ public class Respiration {
         Respiration1();
         Respiration2();
         Respiration3();
+        Respiration4();
+        Respiration5();
     }
 
     private void Respiration1(){
@@ -56,4 +58,23 @@ public class Respiration {
         Main.getEnchants().put(Keys.getRespiration3(), item);
     }
 
+    private void Respiration4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.OXYGEN, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getRespiration4(), item);
+        //TODO: Add recipe for Respiration 4
+        Main.getEnchants().put(Keys.getRespiration4(), item);
+    }
+
+    private void Respiration5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.OXYGEN, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getRespiration5(), item);
+        //TODO: Add recipe for Respiration 5
+        Main.getEnchants().put(Keys.getRespiration5(), item);
+    }
 }

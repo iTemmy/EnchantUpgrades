@@ -28,6 +28,7 @@ public class ImbuedEssences {
         ImbuedMobEssence();
         ImbuedArachnidEssence();
         ImbuedBlaze();
+        ImbuedUndead();
     }
 
     private void ImbuedCushion(){
@@ -195,7 +196,7 @@ public class ImbuedEssences {
         ShapedRecipe recipe = new ShapedRecipe(Keys.getImbuedMobEssence(), item);
         recipe.shape("EEE","EEE","EEE");
         recipe.setIngredient('E', Main.getEssences().get(Keys.getArachnidEssence()));
-        Main.getImbuedEssences().put(Keys.getArachnidEssence(), item);
+        Main.getImbuedEssences().put(Keys.getImbuedArachnid(), item);
     }
 
     private void ImbuedBlaze(){
@@ -209,5 +210,18 @@ public class ImbuedEssences {
         recipe.setIngredient('B', Main.getEssences().get(Keys.getBlazeEssence()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getImbuedEssences().put(Keys.getImbuedBlaze(), item);
+    }
+
+    private void ImbuedUndead(){
+        ItemStack item = new ItemStack(Material.LEATHER);
+        ItemMeta meta = item.getItemMeta();
+        meta.displayName(Component.text(ChatColor.GRAY+""+ChatColor.BOLD+"Imbued Undead"));
+        meta.getPersistentDataContainer().set(Keys.getImbuedUndead(), PersistentDataType.BYTE, (byte) 1);
+        item.setItemMeta(meta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getImbuedUndead(), item);
+        recipe.shape("RRR","RRR","RRR");
+        recipe.setIngredient('R', Main.getEssences().get(Keys.getUndeadEssence()));
+        Bukkit.getServer().addRecipe(recipe);
+        Main.getImbuedEssences().put(Keys.getImbuedUndead(), item);
     }
 }

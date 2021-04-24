@@ -17,6 +17,9 @@ public class Smite {
         Smite3();
         Smite4();
         Smite5();
+        Smite6();
+        Smite7();
+        Smite8();
     }
 
     private void Smite1(){
@@ -82,5 +85,35 @@ public class Smite {
         recipe.setIngredient('S', Main.getEnchants().get(Keys.getSmite4()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getSmite5(), item);
+    }
+
+    private void Smite6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_UNDEAD, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSmite6(), item);
+        //TODO: Add recipe for Smite 6
+        Main.getEnchants().put(Keys.getSmite6(), item);
+    }
+
+    private void Smite7() {
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_UNDEAD, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSmite7(), item);
+        //TODO: Add recipe for Smite 7
+        Main.getEnchants().put(Keys.getSmite7(), item);
+    }
+
+    private void Smite8(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DAMAGE_UNDEAD, 8, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getSmite8(), item);
+        //TODO: Add recipe for SMite 8
+        Main.getEnchants().put(Keys.getSmite8(), item);
     }
 }

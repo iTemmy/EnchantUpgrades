@@ -18,6 +18,9 @@ public class Impaling {
         Impaling3();
         Impaling4();
         Impaling5();
+        Impaling6();
+        Impaling7();
+        Impaling8();
     }
 
     private void Impaling1(){
@@ -87,5 +90,35 @@ public class Impaling {
         recipe.setIngredient('I', Main.getEnchants().get(Keys.getImpaling4()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getImpaling5(), item);
+    }
+
+    private void Impaling6(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.IMPALING, 6, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getImpaling6(), item);
+        //TODO: Add recipe for Impaling 6
+        Main.getEnchants().put(Keys.getImpaling6(), item);
+    }
+
+    private void Impaling7(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.IMPALING, 7, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getImpaling7(), item);
+        //TODO: Add recipe for Impaling 7
+        Main.getEnchants().put(Keys.getImpaling7(), item);
+    }
+
+    private void Impaling8 (){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.IMPALING, 8, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getImpaling8(), item);
+        //TODO: Add recipe for Impaling 8
+        Main.getEnchants().put(Keys.getImpaling8(), item);
     }
 }

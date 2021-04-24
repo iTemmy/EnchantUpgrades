@@ -15,6 +15,8 @@ public class Unbreaking {
         Unbreaking1();
         Unbreaking2();
         Unbreaking3();
+        Unbreaking4();
+        Unbreaking5();
     }
 
     private void Unbreaking1(){
@@ -54,5 +56,25 @@ public class Unbreaking {
         recipe.setIngredient('U', Main.getEnchants().get(Keys.getUnbreaking2()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getUnbreaking3(), item);
+    }
+
+    private void Unbreaking4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DURABILITY, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getUnbreaking4(), item);
+        //TODO: Add recipe for Unbreaking 4
+        Main.getEnchants().put(Keys.getUnbreaking4(), item);
+    }
+
+    private void Unbreaking5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.DURABILITY, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getUnbreaking5(), item);
+        //TODO: Add recipe for Unbreaking 5
+        Main.getEnchants().put(Keys.getUnbreaking5(), item);
     }
 }

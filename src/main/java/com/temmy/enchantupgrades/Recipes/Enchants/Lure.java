@@ -15,6 +15,8 @@ public class Lure {
         Lure1();
         Lure2();
         Lure3();
+        Lure4();
+        Lure5();
     }
 
     private void Lure1(){
@@ -54,5 +56,24 @@ public class Lure {
         recipe.setIngredient('B', Main.getEnchants().get(Keys.getLure2()));
         Bukkit.getServer().addRecipe(recipe);
         Main.getEnchants().put(Keys.getLure3(), item);
+    }
+
+    private void Lure4(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LURE, 4, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLure4(), item);
+        //TODO: Add recipe for Lure 4
+        Main.getEnchants().put(Keys.getLure4(), item);
+    }
+
+    private void Lure5(){
+        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        EnchantmentStorageMeta EMeta = (EnchantmentStorageMeta) item.getItemMeta();
+        EMeta.addStoredEnchant(Enchantment.LURE, 5, true);
+        item.setItemMeta(EMeta);
+        ShapedRecipe recipe = new ShapedRecipe(Keys.getLure5(), item);
+        //TODO: Add recipe for Lure 5
     }
 }
