@@ -1,8 +1,10 @@
 package com.temmy.enchantupgrades;
 
 import com.temmy.enchantupgrades.Commands.getItem;
-import com.temmy.enchantupgrades.Commands.test;
-import com.temmy.enchantupgrades.Events.*;
+import com.temmy.enchantupgrades.Events.onBlockBreakEvent;
+import com.temmy.enchantupgrades.Events.onCraftItemEvent;
+import com.temmy.enchantupgrades.Events.onPlayerArmorChangeEvent;
+import com.temmy.enchantupgrades.Events.onPlayerJoinEvent;
 import com.temmy.enchantupgrades.Recipes.Armor.DragonScale.Dragonscale;
 import com.temmy.enchantupgrades.Recipes.Armor.Legionnaire.Legionnaire;
 import com.temmy.enchantupgrades.Recipes.Armor.Sage.Sage;
@@ -54,7 +56,6 @@ public final class Main extends JavaPlugin {
         // Plugin startup logic
         _instance = this;
         LoadCustomRecipes();
-        getCommand("test").setExecutor(new test());
         getCommand("getitem").setExecutor(new getItem());
         getCommand("getitem").setTabCompleter(new getItemTabCompleter());
         getServer().getPluginManager().registerEvents(new onCraftItemEvent(), this);

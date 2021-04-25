@@ -23,7 +23,7 @@ public class getItemTabCompleter implements @Nullable TabCompleter {
             return completions;
         }else if (args.length == 2){
             final List<String> completions = new ArrayList<>();
-            completions.addAll(Arrays.asList("armor","ore","enchant"));
+            completions.addAll(Arrays.asList("armor","ore","enchant","essence","imbued","item","weapon"));
             return completions;
         }else if (args.length == 3){
             if (args[1].equalsIgnoreCase("armor")){
@@ -34,18 +34,28 @@ public class getItemTabCompleter implements @Nullable TabCompleter {
                 return ores();
             }else if (args[1].equalsIgnoreCase("enchant")){
                 return Enchants();
+            }else if (args[1].equalsIgnoreCase("essence")){
+                return essences();
+            }else if (args[1].equalsIgnoreCase("imbued")){
+                return imbued();
+            }else if (args[1].equalsIgnoreCase("item")){
+                return items();
+            }else if (args[1].equalsIgnoreCase("weapon")){
+                return weapons();
             }
-        }else if (args.length == 4){
-            if (args[2].equalsIgnoreCase("set")){
+        }else if (args.length == 4) {
+            if (args[2].equalsIgnoreCase("set")) {
                 return CustomArmors();
-            }else if (args[2].equalsIgnoreCase("helmet")){
+            } else if (args[2].equalsIgnoreCase("helmet")) {
                 return CustomArmors();
-            }else if (args[2].equalsIgnoreCase("chestplate")){
+            } else if (args[2].equalsIgnoreCase("chestplate")) {
                 return CustomArmors();
-            }else if (args[2].equalsIgnoreCase("leggings")){
+            } else if (args[2].equalsIgnoreCase("leggings")) {
                 return CustomArmors();
-            }else if (args[2].equalsIgnoreCase("boots")){
+            } else if (args[2].equalsIgnoreCase("boots")) {
                 return CustomArmors();
+            } else if (args[2].equalsIgnoreCase("drugarths")){
+                return Arrays.asList("1","2","3","4","5","10");
             }else if (ores().contains(args[2])){
                 return Numbers(64);
             }else if (Enchants().contains(args[2])){
@@ -159,5 +169,24 @@ public class getItemTabCompleter implements @Nullable TabCompleter {
 
     private List<String> CustomArmors(){
         return new ArrayList<>(Arrays.asList("dragonscale","legionnaire","sage","scale","thief","tribal"));
+    }
+
+    private List<String> essences(){
+        return new ArrayList<>(Arrays.asList("base","blaze","prickly","cushion","strider","oxidized","lure","frost","hardening",
+                "luck","mob","quickening","silk","arachnid","undead","skeleton","combustible","projectile","flame",
+                "protection","splicing","treasure","nether"));
+    }
+
+    private List<String> imbued(){
+        return new ArrayList<>(Arrays.asList("blast","cushion","flame","projectile","protection","quickening","silk",
+                "oxidized","oceanic","hardening","prickly","mob","arachnid","blaze"));
+    }
+
+    private List<String> items(){
+        return new ArrayList<>(Arrays.asList("otherworldly","shatteredob"));
+    }
+
+    private List<String> weapons(){
+        return new ArrayList<>(Arrays.asList("drugarths"));
     }
 }
